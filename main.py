@@ -682,6 +682,8 @@ def save():
             if yes_no == "yes":
                 with open("data.txt", "a") as data:
                     data.write(f"{user_website},{user_email},{user_password}\n")
+                    website_input.delete(0, END)
+                    password_input.delete(0, END)
                 return user_password, user_email, user_website
             else:
                 messagebox.showinfo(
